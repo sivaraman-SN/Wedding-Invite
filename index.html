@@ -238,13 +238,13 @@
       line-height: 1.5;
     }
 
-    /* Button Actions */
+    /* Action Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 6px;
-      padding: 11px 22px;
+      padding: 11px 24px;
       background: var(--primary);
       color: #fff !important;
       text-decoration: none;
@@ -344,13 +344,10 @@
       </a>
     </div>
 
-    <!-- Quick Interaction Buttons -->
+    <!-- Quick Interaction Button -->
     <div>
       <button class="btn btn-outline" onclick="shareWhatsApp()">
         📲 Share via WhatsApp
-      </button>
-      <button class="btn btn-outline" onclick="rsvpWhatsApp()">
-        💌 Send RSVP
       </button>
     </div>
 
@@ -414,15 +411,6 @@
         "View Invitation Details & Location:\n" + pageUrl
       );
       window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
-    }
-
-    // --- 4. Send RSVP via WhatsApp ---
-    function rsvpWhatsApp() {
-      // Optional: Add your WhatsApp phone number with country code inside quotes (e.g., "919876543210")
-      const phoneNumber = ""; 
-      const text = encodeURIComponent("Hi Sivaraman & Swarnaa Sri, I/we will be delighted to attend your wedding celebrations!");
-      const target = phoneNumber ? `https://wa.me/${phoneNumber}?text=${text}` : `https://api.whatsapp.com/send?text=${text}`;
-      window.open(target, '_blank');
     }
   </script>
 
